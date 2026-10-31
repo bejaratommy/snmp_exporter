@@ -2,7 +2,7 @@ FROM docker.io/golang:alpine AS build
 ADD --checksum=sha256:9c52951606f9138af758fd28693497181ad119b48433c0a542b4a2128049bd04 https://github.com/prometheus/snmp_exporter/archive/v0.31.0.tar.gz /tmp/snmp_exporter.tar.gz
 RUN tar -xzvf /tmp/snmp_exporter.tar.gz --strip-components=1 \
     && go get \
-      github.com/prometheus/common@v0.73.0 \
+      github.com/prometheus/common@v0.73.1 \
       github.com/jpillora/backoff@v1.1.0 \
       github.com/mdlayher/socket@v0.8.0 \
       github.com/prometheus/procfs@v0.23.0 \
