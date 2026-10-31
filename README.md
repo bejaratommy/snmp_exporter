@@ -9,6 +9,7 @@
 ## Features
 
 * Compiled from source during build time
+* Updates bundled Go dependencies: prometheus/common v0.73.1, jpillora/backoff v1.1.0, mdlayher/socket v0.8.0, prometheus/procfs v0.23.0, xhit/go-str2duration/v2 v2.2.0, golang.org/x/net v0.62.0, and golang.org/x/time v0.16.0
 * Built `FROM scratch`, with zero bloat
 * Reduced attack surface (no shell, no UNIX tools, no package manager...)
 * Runs as unprivileged (non-`root`) user
