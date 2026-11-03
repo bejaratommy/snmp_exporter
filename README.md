@@ -9,6 +9,7 @@
 ## Features
 
 * Compiled from source during build time
+* Go dependencies pinned in [`go.mod`](go.mod) and verified with [`go.sum`](go.sum), overriding the source release's dependencies
 * Built `FROM scratch`, with zero bloat
 * Reduced attack surface (no shell, no UNIX tools, no package manager...)
 * Runs as unprivileged (non-`root`) user
