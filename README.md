@@ -10,6 +10,7 @@
 
 * Compiled from source during build time
 * Go dependencies pinned in [`go.mod`](go.mod) and verified with [`go.sum`](go.sum), overriding the source release's dependencies
+* Includes golang.org/x/oauth2 v0.38.0, x/sync v0.25.0, x/sys v0.50.0, and x/text v0.44.0
 * Built `FROM scratch`, with zero bloat
 * Reduced attack surface (no shell, no UNIX tools, no package manager...)
 * Runs as unprivileged (non-`root`) user
