@@ -1,7 +1,8 @@
 FROM docker.io/golang:alpine AS build
 ADD --checksum=sha256:9c52951606f9138af758fd28693497181ad119b48433c0a542b4a2128049bd04 https://github.com/prometheus/snmp_exporter/archive/v0.31.0.tar.gz /tmp/snmp_exporter.tar.gz
-RUN tar -xzvf /tmp/snmp_exporter.tar.gz --strip-components=1 \
-    && go install
+RUN tar -xzvf /tmp/snmp_exporter.tar.gz --strip-components=1
+COPY go.mod go.sum ./
+RUN go install -mod=readonly
 RUN mkdir /rootfs \
       && cp /go/snmp.yml /rootfs/ \
     && mkdir /rootfs/bin \
