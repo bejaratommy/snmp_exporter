@@ -29,7 +29,7 @@ require (
 	github.com/prometheus/procfs v0.23.0 // indirect
 	github.com/xhit/go-str2duration/v2 v2.2.0 // indirect
 	golang.org/x/crypto v0.59.0 // indirect
-	golang.org/x/net v0.62.0 // indirect
+	golang.org/x/net v0.63.0 // indirect
 	golang.org/x/oauth2 v0.38.0 // indirect
 	golang.org/x/sync v0.25.0 // indirect
 	golang.org/x/sys v0.50.0 // indirect
