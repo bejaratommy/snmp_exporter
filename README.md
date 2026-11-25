@@ -9,6 +9,7 @@
 ## Features
 
 * Compiled from source during build time
+* Updates bundled Go dependencies to the versions listed below
 * Built `FROM scratch`, with zero bloat
 * Reduced attack surface (no shell, no UNIX tools, no package manager...)
 * Runs as unprivileged (non-`root`) user
@@ -34,3 +35,28 @@ Available on RedHat Quay as [`quay.io/ricardbejarano/snmp_exporter`](https://qua
 ### Volumes
 
 - Mount your **configuration** at `/snmp.yml`.
+
+
+## Go dependency updates
+
+The v0.31.0 source archive remains checksum-pinned. The build applies these
+module updates before compiling; Go verifies downloads using its checksum database.
+Unused modules are removed by `go mod tidy`.
+
+| Module | Version |
+| --- | --- |
+| `github.com/prometheus/common` | `v0.74.0` |
+| `github.com/prometheus/exporter-toolkit` | `v0.21.0` |
+| `go.yaml.in/yaml/v2` | `v2.4.5` |
+| `github.com/mdlayher/socket` | `v0.8.0` |
+| `github.com/mdlayher/vsock` | `v1.4.0` |
+| `github.com/jpillora/backoff` | `v1.1.0` |
+| `github.com/prometheus/procfs` | `v0.23.0` |
+| `github.com/xhit/go-str2duration/v2` | `v2.2.0` |
+| `golang.org/x/crypto` | `v0.59.0` |
+| `golang.org/x/sync` | `v0.25.0` |
+| `golang.org/x/oauth2` | `v0.38.0` |
+| `golang.org/x/net` | `v0.63.0` |
+| `golang.org/x/text` | `v0.44.0` |
+| `golang.org/x/time` | `v0.16.0` |
+| `golang.org/x/sys` | `v0.50.0` |
