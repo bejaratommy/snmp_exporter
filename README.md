@@ -9,6 +9,8 @@
 ## Features
 
 * Compiled from source during build time
+* Go dependencies pinned in [`go.mod`](go.mod) and verified with [`go.sum`](go.sum)
+* Includes Prometheus common 0.74.0, exporter-toolkit 0.21.0, and YAML 2.4.5
 * Built `FROM scratch`, with zero bloat
 * Reduced attack surface (no shell, no UNIX tools, no package manager...)
 * Runs as unprivileged (non-`root`) user
